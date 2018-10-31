@@ -1,16 +1,26 @@
 package com.corporate.delivery.model.order;
 
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import com.corporate.delivery.model.OrderRestaurantMenu;
 
 @Entity
 @Table(name="ORDER_HEADER")
 public class OrderHeader {
+
+	
 
 	private Integer id;
 	private Date orderDate;
@@ -57,6 +67,9 @@ public class OrderHeader {
 	
 	private String payMethod;
 	
+	private Boolean schedule;
+	
+	private Integer orderStatus;
 	
 	@Id
 	@GeneratedValue
@@ -69,6 +82,7 @@ public class OrderHeader {
 	}
 	
 	@Column(name = "order_date", unique=true, nullable = false)
+	@Temporal(TemporalType.DATE)
 	public Date getOrderDate() {
 		return orderDate;
 	}
@@ -276,4 +290,22 @@ public class OrderHeader {
 	public void setPayMethod(String payMethod) {
 		this.payMethod = payMethod;
 	}
+	
+	@Column(name = "schedule", unique=true, nullable = false)
+	public Boolean getSchedule() {
+		return schedule;
+	}
+	public void setSchedule(Boolean schedule) {
+		this.schedule = schedule;
+	}
+	
+	@Column(name = "order_status", unique=true, nullable = false)
+	public Integer getOrderStatus() {
+		return orderStatus;
+	}
+	public void setOrderStatus(Integer orderStatus) {
+		this.orderStatus = orderStatus;
+	}
+	
+	
 }

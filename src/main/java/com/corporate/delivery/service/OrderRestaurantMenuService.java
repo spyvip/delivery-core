@@ -2,9 +2,6 @@ package com.corporate.delivery.service;
 
 import java.util.List;
 
-import org.hibernate.Criteria;
-import org.hibernate.criterion.Restrictions;
-
 import com.corporate.delivery.model.OrderRestaurantMenu;
 
 public interface OrderRestaurantMenuService {

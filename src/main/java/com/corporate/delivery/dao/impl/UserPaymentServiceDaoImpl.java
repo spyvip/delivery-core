@@ -8,7 +8,6 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 import com.corporate.delivery.dao.AbstractDao;
 import com.corporate.delivery.dao.UserPaymentServiceDao;
-import com.corporate.delivery.model.User;
 import com.corporate.delivery.model.creditcard.UserPayment;
 
 @Repository("userPaymentServiceDao")

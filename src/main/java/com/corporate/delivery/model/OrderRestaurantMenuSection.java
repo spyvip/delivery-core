@@ -17,7 +17,7 @@ public class OrderRestaurantMenuSection {
 	private String name;
 	private String value;
 	
-	private OrderRestaurantMenu orderRestaurantMenu;
+	/*private OrderRestaurantMenu orderRestaurantMenu;*/
 	
 	@Id
 	@GeneratedValue   
@@ -53,7 +53,7 @@ public class OrderRestaurantMenuSection {
 		this.value = value;
 	}
 	
-	@ManyToOne
+	/*@ManyToOne
     @JoinColumn(name = "order_restaurant_menu_id")
 	public OrderRestaurantMenu getOrderRestaurantMenu() {
 		return orderRestaurantMenu;
@@ -61,5 +61,5 @@ public class OrderRestaurantMenuSection {
 	public void setOrderRestaurantMenu(OrderRestaurantMenu orderRestaurantMenu) {
 		this.orderRestaurantMenu = orderRestaurantMenu;
 	}
-	
+	*/
 }

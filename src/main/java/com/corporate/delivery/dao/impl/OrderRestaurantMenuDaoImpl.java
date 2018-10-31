@@ -10,7 +10,6 @@ import org.springframework.stereotype.Repository;
 import com.corporate.delivery.dao.AbstractDao;
 import com.corporate.delivery.dao.OrderRestaurantMenuDao;
 import com.corporate.delivery.model.OrderRestaurantMenu;
-import com.corporate.delivery.model.order.OrderRestaurant;
 
 @Repository("orderRestaurantMenuDao")
 public class OrderRestaurantMenuDaoImpl extends AbstractDao<Integer,OrderRestaurantMenu> implements OrderRestaurantMenuDao {

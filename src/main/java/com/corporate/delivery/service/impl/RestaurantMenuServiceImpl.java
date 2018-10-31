@@ -20,6 +20,11 @@ public class RestaurantMenuServiceImpl implements RestaurantMenuService {
 	public List<Menu> getRestaurantMenus(Integer menuId) {
 		return restaurantMenuDao.getRestaurantMenus(menuId);
 	}
+	
+	@Transactional
+	public List<Menu> getScheduleRestaurantMenus(Integer restaurantId){
+		return restaurantMenuDao.getScheduleRestaurantMenus(restaurantId);
+	}
 
 	@Transactional
 	public void insertMenu(Menu menuId) {

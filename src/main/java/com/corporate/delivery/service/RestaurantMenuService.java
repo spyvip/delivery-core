@@ -8,6 +8,8 @@ public interface RestaurantMenuService {
 
 	public List<Menu> getRestaurantMenus(Integer menuId); 
 	
+	public List<Menu> getScheduleRestaurantMenus(Integer restaurantId);
+	
 	public void insertMenu(Menu menu) ;
 	
 	public void updateRestaurantMenus(Menu menu);

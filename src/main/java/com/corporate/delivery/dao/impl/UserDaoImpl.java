@@ -1,14 +1,11 @@
 package com.corporate.delivery.dao.impl;
 
-import java.util.List;
-
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
 import com.corporate.delivery.dao.AbstractDao;
 import com.corporate.delivery.dao.UserDao;
-import com.corporate.delivery.model.Restaurant;
 import com.corporate.delivery.model.User;
 
 @Repository("userDao")

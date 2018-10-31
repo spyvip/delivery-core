@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.corporate.delivery.dao.OrderHeaderDao;
+import com.corporate.delivery.model.FilterOrder;
 import com.corporate.delivery.model.order.OrderHeader;
 import com.corporate.delivery.model.order.OrderProcess;
 import com.corporate.delivery.service.OrderHeaderService;
@@ -45,7 +46,7 @@ public class OrderHeaderServiceImpl implements OrderHeaderService {
 		orderHeaderDao.deleteOrderHeader(orderHeader.getId());
 	}
 	
-	@Transactional
+	
 	public Integer processOrder(OrderProcess orderProcess) {
 		orderHeaderDao.insert(orderProcess.getOrderHeader());
 		return null;
@@ -54,6 +55,18 @@ public class OrderHeaderServiceImpl implements OrderHeaderService {
 	public Integer processOrder(Integer userId) {
 		
 		return null;
+	}
+
+	@Transactional
+	public void updateOrderStatus(String id, String orderStatus) {
+		orderHeaderDao.updateOrderStatus(id, orderStatus);
+		
+	}
+
+	@Transactional
+	public List<OrderHeader> getOrderByFilter(String userType, String orderType, String fromdate, String todate) {
+		return orderHeaderDao.getOrderByFilter(userType,orderType,fromdate,todate);
+		
 	}
 	
 }

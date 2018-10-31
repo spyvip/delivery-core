@@ -1,13 +1,9 @@
 package com.corporate.delivery.model;
 
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -25,6 +21,17 @@ public class Menu {
 	private Double salesPrice;
 	private Double restaurantPrice;
 	private Boolean active;	 
+	
+	private Boolean mon;	
+	private Boolean tue;	
+	private Boolean wed;	
+	private Boolean thu;	
+	private Boolean fri;	
+	private Boolean sat;	
+	private Boolean sun;
+	
+	
+	private Boolean schedule;	
 	
 	//private List<MenuSection> sections;
  
@@ -127,6 +134,72 @@ public class Menu {
 	public void setActive(Boolean active) {
 		this.active = active;
 	}
+	
+	@Column(name = "Mon", unique=true, nullable = false)
+	public Boolean getMon() {
+		return mon;
+	}
+	public void setMon(Boolean mon) {
+		this.mon = mon;
+	}
+	
+	@Column(name = "Tue", unique=true, nullable = false)
+	public Boolean getTue() {
+		return tue;
+	}
+	public void setTue(Boolean tue) {
+		this.tue = tue;
+	}
+	
+	@Column(name = "Wed", unique=true, nullable = false)
+	public Boolean getWed() {
+		return wed;
+	}
+	public void setWed(Boolean wed) {
+		this.wed = wed;
+	}
+	
+	@Column(name = "Thu", unique=true, nullable = false)
+	public Boolean getThu() {
+		return thu;
+	}
+	public void setThu(Boolean thu) {
+		this.thu = thu;
+	}
+	
+	@Column(name = "Fri", unique=true, nullable = false)
+	public Boolean getFri() {
+		return fri;
+	}
+	public void setFri(Boolean fri) {
+		this.fri = fri;
+	}
+	
+	@Column(name = "Sat", unique=true, nullable = false)
+	public Boolean getSat() {
+		return sat;
+	}
+	public void setSat(Boolean sat) {
+		this.sat = sat;
+	}
+	
+	@Column(name = "Sun", unique=true, nullable = false)
+	public Boolean getSun() {
+		return sun;
+	}
+	public void setSun(Boolean sun) {
+		this.sun = sun;
+	}
+	
+	@Column(name = "schedule", unique=true, nullable = false)
+	public Boolean getSchedule() {
+		return schedule;
+	}
+	public void setSchedule(Boolean schedule) {
+		this.schedule = schedule;
+	}
+	
+
 	
 	/*
 	@OneToMany(mappedBy = "Menu", cascade = CascadeType.ALL)

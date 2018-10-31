@@ -16,10 +16,12 @@ import com.corporate.delivery.model.CouponUser;
 public class CouponUserDaoImpl extends AbstractDao<Integer, CouponUser>implements CouponUserDao{
 
 	public List<CouponUser> getCouponUser(int userId) {
+		
 		Query query = this.getSession().createQuery("from CouponUser up where up.userId = " + new Integer(userId));
 		List<CouponUser> list = query.list();
 		return list;
 	}
+	
 
 	public void insert(CouponUser couponUser) {
 		this.getSession().save(couponUser);

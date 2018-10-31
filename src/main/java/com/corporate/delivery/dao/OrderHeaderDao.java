@@ -2,6 +2,7 @@ package com.corporate.delivery.dao;
 
 import java.util.List;
 
+import com.corporate.delivery.model.FilterOrder;
 import com.corporate.delivery.model.order.OrderHeader;
 
 public interface OrderHeaderDao {
@@ -17,4 +18,8 @@ public interface OrderHeaderDao {
 	public void updateOrderHeader(OrderHeader orderHeader);
 	
 	public void deleteOrderHeader(Integer userId);
+
+	public void updateOrderStatus(String id, String orderStatus);
+	
+	public List<OrderHeader> getOrderByFilter(String userType, String orderType, String fromdate, String todate);
 }

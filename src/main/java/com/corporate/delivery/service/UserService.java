@@ -1,7 +1,5 @@
 package com.corporate.delivery.service;
 
-import java.util.List;
-
 import com.corporate.delivery.model.User;
 
 public interface UserService {

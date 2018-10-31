@@ -1,7 +1,5 @@
 package com.corporate.delivery.model;
 
-import java.util.List;
-
 public class OrderItemDesc {
 	
 	Integer id;

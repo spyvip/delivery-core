@@ -8,6 +8,7 @@ public interface OrderRestaurantService {
 
 	public List<OrderRestaurant> getOrderRestaurant(Integer orderId);
 	
+	
 	public List<OrderRestaurant>getOrderRestaurantDetail(Integer id);
 	
 	public void insert(OrderRestaurant orderRestaurant) ;

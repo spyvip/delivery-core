@@ -1,7 +1,11 @@
 package com.corporate.delivery.dao.impl;
 
-import java.util.ArrayList;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import org.hibernate.Criteria;
 import org.hibernate.Query;
@@ -23,6 +27,12 @@ public class RestaurantMenuDaoImpl  extends AbstractDao<Integer, Menu> implement
 		List<Menu> list = query.list();
 		return list;
 	}
+	
+	public List<Menu> getScheduleRestaurantMenus(Integer restaurantId) {
+		Query 	query = this.getSession().createQuery("from Menu me where me.restaurantBustypeId = " + new Integer(restaurantId) + " and " + "me.schedule = " + true);
+		List<Menu> list = query.list();
+		return list;
+	}
 
 	public void insert(Menu menu) {
 		this.getSession().save(menu);
@@ -36,11 +46,11 @@ public class RestaurantMenuDaoImpl  extends AbstractDao<Integer, Menu> implement
 
 	public void deleteRestaurantMenus(Integer menuId) {
 		
-		Query query = this.getSession().createQuery("from MenuSection up where up.menuId = " + new Integer(menuId));
-		List<MenuSection> list = query.list();
-		for(MenuSection menuSection : list){
+		/*Query query = this.getSession().createQuery("from Menu up where up.menuId = " + new Integer(menuId));
+		List<Menu> list = query.list();
+		for(Menu menuSection : list){
 			this.getSession().delete(menuSection);
-		}
+		}*/
 		
 		Criteria cr = getSession().createCriteria(Menu.class);
 		cr.add(Restrictions.eq("id", menuId));

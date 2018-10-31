@@ -8,8 +8,11 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.corporate.delivery.model.order.OrderHeader;
 
 @Entity
 @Table(name="ORDER_RESTAURANTS_MENU")
@@ -26,7 +29,7 @@ public class OrderRestaurantMenu {
 	private Double salePriceMenu;
 	private Double salePriceTax;
 	
-	private List<OrderRestaurantMenuSection> orderRestaurantMenuSection;
+	/*private List<OrderRestaurantMenuSection> orderRestaurantMenuSection;*/
 	
 	@Id
 	@GeneratedValue   
@@ -102,13 +105,14 @@ public class OrderRestaurantMenu {
 		this.salePriceTax = salePriceTax;
 	}
 	
-	@OneToMany(mappedBy = "orderRestaurantMenu", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+	/*@OneToMany(mappedBy = "orderRestaurantMenu", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
 	public List<OrderRestaurantMenuSection> getOrderRestaurantMenuSection() {
 		return orderRestaurantMenuSection;
 	} 
 	public void setOrderRestaurantMenuSection(List<OrderRestaurantMenuSection> orderRestaurantMenuSection) {
 		this.orderRestaurantMenuSection = orderRestaurantMenuSection;
-	}
+	}*/
+	
 	 
 	
 }

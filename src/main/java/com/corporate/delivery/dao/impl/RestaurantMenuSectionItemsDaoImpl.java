@@ -1,8 +1,6 @@
 package com.corporate.delivery.dao.impl;
 
 import java.util.List;
-import java.util.Set;
-
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.criterion.Restrictions;
@@ -10,9 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.corporate.delivery.dao.AbstractDao;
 import com.corporate.delivery.dao.RestaurantMenuSectionItemsDao;
-import com.corporate.delivery.model.MenuItems;
 import com.corporate.delivery.model.MenuSection;
-import com.corporate.delivery.model.creditcard.UserPayment;
 
 
 @Repository("restaurantMenuSectionDao")

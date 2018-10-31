@@ -8,6 +8,8 @@ public interface RestaurantMenuDao {
 
 	List<Menu> getRestaurantMenus(Integer menuId); 
 	
+	public List<Menu> getScheduleRestaurantMenus(Integer restaurantId);
+	
 	public void insert(Menu menu) ;
 	
 	public void updateRestaurantMenus(Menu menu);

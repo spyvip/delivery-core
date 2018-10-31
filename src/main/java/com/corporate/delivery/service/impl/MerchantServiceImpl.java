@@ -6,7 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.corporate.delivery.dao.MerchantDao;
 import com.corporate.delivery.model.Merchant;
-import com.corporate.delivery.model.User;
 import com.corporate.delivery.service.MerchantService;
 
 @Service("merchantService")

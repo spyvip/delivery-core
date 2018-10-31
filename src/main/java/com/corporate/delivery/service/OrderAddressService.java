@@ -3,7 +3,6 @@ package com.corporate.delivery.service;
 import java.util.List;
 
 import com.corporate.delivery.model.order.OrderAddresses;
-import com.corporate.delivery.model.order.OrderHeader;
 
 public interface OrderAddressService {
 

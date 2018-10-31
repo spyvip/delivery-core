@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.corporate.delivery.dao.OrderItemsDao;
-import com.corporate.delivery.model.creditcard.UserPayment;
 import com.corporate.delivery.model.order.OrderRestaurant;
 import com.corporate.delivery.service.OrderRestaurantService;
 
